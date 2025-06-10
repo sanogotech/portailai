@@ -246,29 +246,49 @@ section h2::after {
     color: #666;
 }
 
-/* Cartes Cas d'Usage / REX / Métriques */
-.use-case-card, .rex-card, .metric-card {
+/* Cartes Cas d'Usage / REX / Métriques / Roadmap / Nouveaux Métiers */
+.use-case-card, .rex-card, .metric-card, .roadmap-card, .job-card {
     border-radius: 15px;
     background-color: #fff;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.use-case-card:hover, .rex-card:hover, .metric-card:hover {
+.use-case-card:hover, .rex-card:hover, .metric-card:hover, .roadmap-card:hover, .job-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.use-case-card .card-title, .rex-card h4, .metric-card h4 {
+.use-case-card .card-title, .rex-card h4, .metric-card h4, .roadmap-card h4, .job-card h5 {
     color: #007bff;
     font-weight: bold;
 }
 
-.use-case-card .badge {
+.use-case-card .badge, .job-card .badge {
     font-size: 0.8rem;
     padding: 0.5em 0.7em;
     border-radius: 15px;
     margin-bottom: 5px;
+}
+
+/* Roadmap et Nouveaux Métiers spécifiques */
+.roadmap-card ul, .job-card ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.roadmap-card ul li, .job-card ul li {
+    margin-bottom: 8px;
+}
+
+.roadmap-card ul li i, .job-card ul li i {
+    color: #28a745; /* Vert pour les checks */
+    margin-right: 8px;
+}
+
+.job-card .badge {
+    background-color: #e9ecef; /* Gris clair pour les compétences */
+    color: #495057;
 }
 
 /* Footer */
