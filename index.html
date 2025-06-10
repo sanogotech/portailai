@@ -52,7 +52,17 @@
     <section id="concepts" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5 display-4 fw-bold animate__animated animate__fadeIn">Top 40 Concepts Essentiels de l'IA</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="input-group shadow-sm animate__animated animate__zoomIn">
+                        <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Rechercher un concept (ex: Machine Learning, NLP)...">
+                        <button class="btn btn-primary" type="button" id="searchButton"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="concepts-container">
                 </div>
         </div>
     </section>
@@ -60,46 +70,345 @@
     <section id="use-cases" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5 display-4 fw-bold animate__animated animate__fadeIn">Cas d'Usage Réels & Projets Exemplaires</h2>
+
+            <h3 class="use-case-category-title animate__animated animate__fadeIn">IA & Santé <i class="fas fa-heartbeat ms-2"></i></h3>
+            <p class="text-center mb-4 text-muted animate__animated animate__fadeIn">
+                **Enjeux & Défis :** La santé est un domaine crucial où l'IA promet de révolutionner le diagnostic, le traitement et la recherche. Les principaux défis incluent la **qualité et la confidentialité des données médicales**, la **nécessité de modèles interprétables** pour la confiance des cliniciens, la **validation réglementaire** des systèmes, et l'**intégration transparente** dans les flux de travail hospitaliers.
+            </p>
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp">
                     <div class="card h-100 shadow-lg border-0 use-case-card">
                         <div class="card-body">
-                            <h5 class="card-title text-primary"><i class="fas fa-chart-line me-2"></i>Recommandation Personnalisée</h5>
-                            <p class="card-text">Les systèmes d'IA analysent le comportement et les préférences des utilisateurs pour suggérer des produits, films ou contenus pertinents.</p>
+                            <h5 class="card-title text-primary"><i class="fas fa-stethoscope me-2"></i>Diagnostic Médical Assisté par IA</h5>
+                            <p class="card-text">L'IA analyse des **images médicales** (radiographies, IRM, scanners) et des **données de patients** pour détecter des anomalies, aider au diagnostic précoce de maladies comme le cancer, la rétinopathie diabétique, ou les maladies cardiaques, et suggérer des pistes aux radiologues.</p>
                             <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
-                            <span class="badge bg-info text-dark me-1">Machine Learning</span>
-                            <span class="badge bg-info text-dark me-1">Apprentissage Collaboratif</span>
+                            <span class="badge bg-info text-dark me-1">Vision par Ordinateur</span>
                             <span class="badge bg-info text-dark me-1">Deep Learning</span>
+                            <span class="badge bg-info text-dark me-1">CNN</span>
                             <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
-                            <p class="small">Système de recommandation de Netflix, Suggestions musicales de Spotify.</p>
+                            <p class="small">Google DeepMind (détection maladies oculaires), IBM Watson Health (oncologie), PathAI (pathologie numérique).</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
                     <div class="card h-100 shadow-lg border-0 use-case-card">
                         <div class="card-body">
-                            <h5 class="card-title text-primary"><i class="fas fa-stethoscope me-2"></i>Diagnostic Médical Assisté par IA</h5>
-                            <p class="card-text">L'IA aide les professionnels de la santé à diagnostiquer des maladies à partir d'images médicales (radiographies, IRM) et de données patients.</p>
+                            <h5 class="card-title text-primary"><i class="fas fa-dna me-2"></i>Découverte & Développement de Médicaments</h5>
+                            <p class="card-text">L'IA accélère la recherche de nouveaux médicaments en **prédisant l'interaction de molécules**, en identifiant des **cibles thérapeutiques prometteuses**, en optimisant les processus de conception de composés, et en réduisant les cycles de tests coûteux. Cela ouvre la voie à des thérapies plus rapides et ciblées.</p>
                             <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
-                            <span class="badge bg-info text-dark me-1">Vision par Ordinateur</span>
-                            <span class="badge bg-info text-dark me-1">Deep Learning</span>
-                            <span class="badge bg-info text-dark me-1">Réseaux Neuronaux Convolutifs (CNN)</span>
+                            <span class="badge bg-info text-dark me-1">Machine Learning</span>
+                            <span class="badge bg-info text-dark me-1">Modèles Génératifs</span>
+                            <span class="badge bg-info text-dark me-1">Graphes de Connaissances</span>
                             <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
-                            <p class="small">Google DeepMind pour la détection des maladies oculaires, IBM Watson Health pour l'oncologie.</p>
+                            <p class="small">Insilico Medicine, Atomwise, Recursion Pharmaceuticals (découverte de médicaments par IA).</p>
                         </div>
                     </div>
                 </div>
-                 <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
                     <div class="card h-100 shadow-lg border-0 use-case-card">
                         <div class="card-body">
-                            <h5 class="card-title text-primary"><i class="fas fa-robot me-2"></i>Véhicules Autonomes</h5>
-                            <p class="card-text">L'IA est le cerveau des véhicules autonomes, leur permettant de percevoir leur environnement, de prendre des décisions et de naviguer en toute sécurité.</p>
+                            <h5 class="card-title text-primary"><i class="fas fa-notes-medical me-2"></i>Gestion Personnalisée des Traitements</h5>
+                            <p class="card-text">L'IA analyse le **dossier médical complet** d'un patient (historique, génétique, réponse aux traitements) pour suggérer des **plans de traitement personnalisés**, optimiser les dosages, prédire la réaction aux médicaments et gérer des cohortes de patients atteints de maladies chroniques.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">TLN</span>
+                            <span class="badge bg-info text-dark me-1">Apprentissage Collaboratif</span>
+                            <span class="badge bg-info text-dark me-1">Systèmes Recommandations</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Tempus (oncologie de précision), Babylon Health (consultations virtuelles avec IA).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="use-case-category-title animate__animated animate__fadeIn mt-5">IA & Finance <i class="fas fa-chart-line ms-2"></i></h3>
+            <p class="text-center mb-4 text-muted animate__animated animate__fadeIn">
+                **Enjeux & Défis :** Le secteur financier est à la fois très réglementé et riche en données. Les défis majeurs incluent la **sécurité des données**, la **détection et prévention de la fraude** de plus en plus sophistiquée, la **conformité réglementaire** (GDPR, AML), la **fiabilité des prédictions** dans des marchés volatils, et l'**explicabilité des décisions** prises par l'IA pour la transparence et l'auditabilité.
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-shield-alt me-2"></i>Détection de Fraude et Blanchiment d'Argent</h5>
+                            <p class="card-text">L'IA analyse des **milliards de transactions** en temps réel pour identifier des **motifs suspects** (comportements inhabituels, anomalies) qui peuvent indiquer une fraude par carte bancaire, un blanchiment d'argent ou d'autres activités financières illicites, renforçant la sécurité et la conformité.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Machine Learning</span>
+                            <span class="badge bg-info text-dark me-1">Détection d'Anomalies</span>
+                            <span class="badge bg-info text-dark me-1">Apprentissage Non Supervisé</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Systèmes anti-fraude de Visa et MasterCard, FICO Falcon, Palantir (pour la lutte contre le blanchiment).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-robot me-2"></i>Trading Algorithmique & Robo-Advisors</h5>
+                            <p class="card-text">L'IA exécute des **transactions boursières à haute fréquence** basées sur des stratégies complexes et des analyses de marché en temps réel. Les **robo-advisors** utilisent l'IA pour fournir des conseils d'investissement personnalisés, gérer des portefeuilles et rééquilibrer automatiquement les actifs.</p>
                             <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
                             <span class="badge bg-info text-dark me-1">Apprentissage par Renforcement</span>
-                            <span class="badge bg-info text-dark me-1">Vision par Ordinateur</span>
-                            <span class="badge bg-info text-dark me-1">Fusion de Capteurs</span>
+                            <span class="badge bg-info text-dark me-1">Analyse de Séries Temporelles</span>
+                            <span class="badge bg-info text-dark me-1">Optimisation</span>
                             <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
-                            <p class="small">Tesla Autopilot, Waymo (Google).</p>
+                            <p class="small">Betterment, Wealthfront (Robo-Advisors), fonds spéculatifs quantitatifs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-user-tie me-2"></i>Scoring de Crédit & Évaluation des Risques</h5>
+                            <p class="card-text">L'IA évalue la **solvabilité des emprunteurs** en analysant une gamme plus large de données que les méthodes traditionnelles, améliorant la précision des scores de crédit. Elle permet également une **évaluation plus fine des risques** pour les prêts, les assurances et les investissements.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Machine Learning</span>
+                            <span class="badge bg-info text-dark me-1">Modélisation Prédictive</span>
+                            <span class="badge bg-info text-dark me-1">Arbres de Décision</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Prêteurs fintech comme Upstart, modèles de risque pour les grandes banques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="use-case-category-title animate__animated animate__fadeIn mt-5">IA & Industrie/Logistique <i class="fas fa-industry ms-2"></i></h3>
+            <p class="text-center mb-4 text-muted animate__animated animate__fadeIn">
+                **Enjeux & Défis :** Ce secteur vise à optimiser l'efficacité, réduire les coûts et améliorer la sécurité. Les défis incluent la **collecte et l'intégration de données hétérogènes** (capteurs IoT, ERP), la **résistance au changement** dans des environnements traditionnels, la **sécurité cybernétique** des systèmes industriels connectés, et la **gestion de la complexité** des chaînes d'approvisionnement mondiales.
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-cogs me-2"></i>Maintenance Prédictive et Qualité</h5>
+                            <p class="card-text">L'IA analyse les **données des capteurs** (vibrations, température, bruit) des machines industrielles pour prédire les pannes avant qu'elles ne surviennent. Cela permet une **maintenance proactive**, réduit les temps d'arrêt imprévus, prolonge la durée de vie des équipements et optimise la qualité de production.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Machine Learning</span>
+                            <span class="badge bg-info text-dark me-1">Analyse Séries Temporelles</span>
+                            <span class="badge bg-info text-dark me-1">Edge AI</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">GE Predix, Siemens MindSphere, Schneider Electric (optimisation usines).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-shipping-fast me-2"></i>Optimisation de la Chaîne d'Approvisionnement</h5>
+                            <p class="card-text">L'IA améliore la **prévision de la demande**, la **gestion des stocks**, la **planification des itinéraires** de livraison et l'**optimisation des entrepôts**. Cela réduit les coûts logistiques, améliore la réactivité aux fluctuations du marché et minimise les ruptures de stock.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Optimisation</span>
+                            <span class="badge bg-info text-dark me-1">Prédiction</span>
+                            <span class="badge bg-info text-dark me-1">Apprentissage par Renforcement</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Amazon (ses propres opérations logistiques), Fournisseurs de solutions SCM basées sur l'IA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-robot me-2"></i>Robotique Collaborative et Usines Intelligentes</h5>
+                            <p class="card-text">Les **robots collaboratifs (cobots)**, guidés par l'IA, travaillent aux côtés des humains pour des tâches d'assemblage, de manipulation ou de contrôle qualité. L'IA orchestre également l'ensemble des processus dans les **usines intelligentes**, optimisant la production en temps réel.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Robotique</span>
+                            <span class="badge bg-info text-dark me-1">Vision par Ordinateur</span>
+                            <span class="badge bg-info text-dark me-1">Apprentissage par Renforcement</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Universal Robots (cobots), FANUC (robots industriels intelligents), Bosch (industrie 4.0).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="use-case-category-title animate__animated animate__fadeIn mt-5">IA & Commerce/Marketing <i class="fas fa-shopping-bag ms-2"></i></h3>
+            <p class="text-center mb-4 text-muted animate__animated animate__fadeIn">
+                **Enjeux & Défis :** Le commerce et le marketing visent à améliorer l'expérience client et à maximiser les ventes. Les défis comprennent la **protection de la vie privée des consommateurs**, la **personnalisation à grande échelle** sans surcharger, la **mesure précise du ROI** des campagnes IA, et l'**adaptation rapide aux tendances du marché** et aux préférences changeantes des clients.
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-handshake me-2"></i>Systèmes de Recommandation Personnalisée</h5>
+                            <p class="card-text">L'IA analyse le **comportement d'achat**, les **préférences passées** et les **interactions** des utilisateurs pour suggérer des produits, services, films ou contenus pertinents. Cela améliore l'expérience client, augmente l'engagement et stimule les ventes croisées.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Machine Learning</span>
+                            <span class="badge bg-info text-dark me-1">Apprentissage Collaboratif</span>
+                            <span class="badge bg-info text-dark me-1">Deep Learning</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Système de recommandation de Netflix, Amazon, Spotify.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-comments me-2"></i>Chatbots & Assistants Virtuels pour le Service Client</h5>
+                            <p class="card-text">Les **chatbots et assistants virtuels** basés sur l'IA fournissent une assistance client 24/7, répondent aux questions fréquentes, résolvent des problèmes courants et guident les utilisateurs. Ils réduisent les coûts du service client et améliorent la satisfaction en offrant des réponses instantanées.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">TLN</span>
+                            <span class="badge bg-info text-dark me-1">LLM</span>
+                            <span class="badge bg-info text-dark me-1">Dialogue Systèmes</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Chatbots de banques et compagnies aériennes, Google Assistant, Amazon Alexa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-bullhorn me-2"></i>Marketing Prédictif & Optimisation des Campagnes</h5>
+                            <p class="card-text">L'IA analyse de vastes ensembles de données pour **segmenter les clients**, **prédire leur comportement futur** (achat, désabonnement), et **optimiser les campagnes marketing** en temps réel. Elle permet des messages plus ciblés, un meilleur ROI et une expérience client plus pertinente.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Modélisation Prédictive</span>
+                            <span class="badge bg-info text-dark me-1">Clustering</span>
+                            <span class="badge bg-info text-dark me-1">A/B Testing</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Salesforce Einstein, Adobe Sensei, Google Ads (optimisation des enchères IA).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="use-case-category-title animate__animated animate__fadeIn mt-5">IA & Sécurité/Gestion Urbaine <i class="fas fa-city ms-2"></i></h3>
+            <p class="text-center mb-4 text-muted animate__animated animate__fadeIn">
+                **Enjeux & Défis :** La sécurité et la gestion urbaine s'appuient sur l'IA pour l'efficacité et la protection. Les défis majeurs incluent les **questions de confidentialité** (surveillance), la **précision de la reconnaissance** dans des environnements complexes, la **résilience des infrastructures** face aux cyberattaques, et la **nécessité d'une collaboration** entre les systèmes publics et privés.
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-camera-retro me-2"></i>Surveillance Vidéo Intelligente</h5>
+                            <p class="card-text">L'IA analyse les **flux vidéo en temps réel** pour détecter des comportements anormaux (personnes en détresse, attroupements suspects), des intrusions, des objets abandonnés, ou des infractions au code de la route. Cela améliore la réactivité des forces de l'ordre et la sécurité publique.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Vision par Ordinateur</span>
+                            <span class="badge bg-info text-dark me-1">Détection d'Objets</span>
+                            <span class="badge bg-info text-dark me-1">Analyse Vidéo</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Hikvision, Axis Communications (caméras IP avec IA), projets de villes intelligentes (ex: Shanghai).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-traffic-light me-2"></i>Gestion Intelligente du Trafic Urbain</h5>
+                            <p class="card-text">L'IA optimise les **feux de circulation**, redirige le trafic en cas d'embouteillage ou d'accident, et prédit les zones à forte congestion. Elle utilise des données de capteurs, de GPS et de caméras pour rendre les villes plus fluides et réduire les temps de trajet.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Apprentissage par Renforcement</span>
+                            <span class="badge bg-info text-dark me-1">Analyse Données Temps Réel</span>
+                            <span class="badge bg-info text-dark me-1">Optimisation</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Projets de villes intelligentes (ex: Singapour, Barcelone), solutions de gestion du trafic Siemens.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-fire-extinguisher me-2"></i>Prévention et Réponse aux Urgences</h5>
+                            <p class="card-text">L'IA analyse les données météorologiques, les capteurs et les informations géospatiales pour **prédire les risques de catastrophes naturelles** (incendies, inondations). Elle aide aussi à **optimiser le déploiement des ressources** (pompiers, ambulances) en situation d'urgence, améliorant la réactivité et la sécurité.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Modélisation Prédictive</span>
+                            <span class="badge bg-info text-dark me-1">Analyse Géospatiale</span>
+                            <span class="badge bg-info text-dark me-1">Simulation</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">IBM Watson (prédiction météo pour événements extrêmes), systèmes d'alerte précoce.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="use-case-category-title animate__animated animate__fadeIn mt-5">IA & Environnement/Agriculture <i class="fas fa-leaf ms-2"></i></h3>
+            <p class="text-center mb-4 text-muted animate__animated animate__fadeIn">
+                **Enjeux & Défis :** Ces secteurs cherchent à accroître la durabilité et l'efficience des ressources. Les défis incluent l'**accès à des données environnementales précises**, la **nécessité de modèles robustes** face aux variations climatiques, l'**intégration de technologies** dans des pratiques parfois traditionnelles, et la **mesure de l'impact réel** sur la biodiversité et les écosystèmes.
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-tractor me-2"></i>Agriculture de Précision et Robotique Agricole</h5>
+                            <p class="card-text">L'IA analyse les **données des drones, capteurs et satellites** pour optimiser l'irrigation, la fertilisation et la détection des maladies/ravageurs des cultures. Les **robots agricoles** autonomes effectuent des tâches précises (désherbage, récolte), augmentant les rendements et réduisant l'utilisation de produits chimiques.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Vision par Ordinateur</span>
+                            <span class="badge bg-info text-dark me-1">Analyse Géospatiale</span>
+                            <span class="badge bg-info text-dark me-1">IoT</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">John Deere (tracteurs autonomes, pulvérisation ciblée), Blue River Technology (désherbage de précision).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-thermometer-half me-2"></i>Modélisation Climatique & Prédiction des Catastrophes</h5>
+                            <p class="card-text">L'IA traite des volumes massifs de données climatiques et environnementales pour **améliorer les modèles de prévision météorologique** à court et long terme, et **anticiper les catastrophes naturelles** (ouragans, feux de forêt, inondations). Cela aide à la planification et à la mitigation des risques.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Deep Learning</span>
+                            <span class="badge bg-info text-dark me-1">Analyse Séries Temporelles</span>
+                            <span class="badge bg-info text-dark me-1">Big Data</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Projets de la NOAA et de Google (prévision inondations), initiatives de l'ONU pour le changement climatique.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-recycle me-2"></i>Gestion Intelligente des Ressources & Déchets</h5>
+                            <p class="card-text">L'IA optimise la **gestion de l'eau, de l'énergie et des déchets** dans les villes et industries. Elle peut prédire la consommation, détecter les fuites, optimiser le tri et le recyclage des déchets, et améliorer l'efficacité des réseaux de distribution, contribuant à une économie circulaire.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Optimisation</span>
+                            <span class="badge bg-info text-dark me-1">IoT</span>
+                            <span class="badge bg-info text-dark me-1">Prédiction</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Solutions de gestion des réseaux électriques intelligents (smart grids), Veolia (gestion des déchets avec IA).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="use-case-category-title animate__animated animate__fadeIn mt-5">IA & Divertissement/Création <i class="fas fa-palette ms-2"></i></h3>
+            <p class="text-center mb-4 text-muted animate__animated animate__fadeIn">
+                **Enjeux & Défis :** Ce domaine est marqué par l'innovation rapide et les questions de propriété intellectuelle. Les défis incluent la **créativité vs. l'originalité** (le "droit d'auteur de l'IA"), la **maîtrise des modèles génératifs** pour des résultats cohérents et éthiques, l'**intégration de l'IA** dans les outils créatifs existants, et l'**évolution des compétences humaines** face à l'automatisation de certaines tâches créatives.
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-brush me-2"></i>Génération Artistique & Musicale</h5>
+                            <p class="card-text">Les **modèles génératifs d'IA** (GANs, Diffusion Models, LLM) créent des œuvres d'art originales (peintures, illustrations), composent de la musique dans divers styles, et écrivent des scénarios ou des poèmes. Cela ouvre de nouvelles voies pour l'expression créative et la production de contenu.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Modèles Génératifs (GANs, Diffusion)</span>
+                            <span class="badge bg-info text-dark me-1">Deep Learning</span>
+                            <span class="badge bg-info text-dark me-1">Transformers</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">DALL-E, Midjourney, Stable Diffusion (génération d'images), Amper Music, AIVA (composition musicale IA).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-gamepad me-2"></i>IA pour les Jeux Vidéo</h5>
+                            <p class="card-text">L'IA est utilisée pour créer des **personnages non-joueurs (PNJ)** plus intelligents et adaptatifs, générer des **mondes et quêtes procéduraux**, optimiser les performances graphiques, et personnaliser l'expérience de jeu en fonction du style du joueur.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Apprentissage par Renforcement</span>
+                            <span class="badge bg-info text-dark me-1">Génération Procédurale</span>
+                            <span class="badge bg-info text-dark me-1">Réseaux de Neurones</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">DeepMind AlphaStar (StarCraft II), PNJ dans les jeux open-world (ex: Skyrim).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="card h-100 shadow-lg border-0 use-case-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="fas fa-video me-2"></i>Production & Post-production Média Intelligente</h5>
+                            <p class="card-text">L'IA aide à l'**édition automatique** de vidéos, à la **traduction et au doublage** de contenu multilingue, à la **création d'effets spéciaux** plus réalistes (deepfakes, mais aussi effets pour films) et à l'optimisation des flux de travail pour les studios de cinéma et de télévision.</p>
+                            <h6 class="mt-3 text-secondary">Concepts Impliqués :</h6>
+                            <span class="badge bg-info text-dark me-1">Vision par Ordinateur</span>
+                            <span class="badge bg-info text-dark me-1">TLN</span>
+                            <span class="badge bg-info text-dark me-1">Modèles Génératifs</span>
+                            <h6 class="mt-3 text-secondary">Projets Exemplaires :</h6>
+                            <p class="small">Adobe Sensei (outils de création), Descript (édition audio/vidéo par texte).</p>
                         </div>
                     </div>
                 </div>
@@ -116,7 +425,7 @@
                         <h4 class="text-primary"><i class="fas fa-exclamation-triangle me-2"></i>Défis Courants & Apprentissages</h4>
                         <ul class="list-unstyled">
                             <li class="mb-2"><i class="fas fa-circle-notch text-secondary me-2"></i><strong>Biais des Données :</strong> Assurez-vous que vos données d'entraînement sont représentatives et diverses pour éviter les biais dans les résultats du modèle. Un biais dans les données peut conduire à des décisions injustes ou incorrectes.</li>
-                            <li class="mb-2"><i class="fas fa-circle-notch text-secondary me-2"></i><strong>Interprétabilité des Modèles :</strong> Les modèles "boîtes noires" sont difficiles à expliquer. Visez la transparence lorsque c'est possible, surtout dans des domaines critiques comme la santé ou la finance.</li>
+                            <li class="mb-2"><i class="fas fa-circle-notch text-secondary me-2"></i><strong>Interprétabilité des Modèles :</strong> "Black box" models are difficult to explain; strive for transparency when possible, especially in critical domains like healthcare or finance.</li>
                             <li class="mb-2"><i class="fas fa-circle-notch text-secondary me-2"></i><strong>Scalabilité :</strong> Concevez des systèmes capables de gérer des volumes de données et des charges utilisateur croissants. Pensez à l'infrastructure dès le début.</li>
                             <li class="mb-2"><i class="fas fa-circle-notch text-secondary me-2"></i><strong>Considérations Éthiques :</strong> Réfléchissez toujours à l'impact sociétal et aux implications éthiques de vos solutions d'IA. La responsabilité est clé.</li>
                         </ul>
